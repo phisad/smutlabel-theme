@@ -10,3 +10,24 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  onepress-child
 */
+#huegelrock-button-wrapper {
+	text-align: center;
+	width: 100%;
+}
+
+#huegelrock-button {
+	-webkit-border-radius: 4;
+	-moz-border-radius: 4;
+	border-radius: 4px;
+	color: #FFFFFF;
+	background-color: #4E7DC7;
+	text-decoration: none;
+	position: relative;
+	clear: both;
+}
+
+#huegelrock-button:hover {
+	color: #FFFFFF;
+	background-color: #F29C03;
+	text-decoration: none;
+}
