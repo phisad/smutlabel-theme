@@ -12,7 +12,7 @@ if ( !$disable ) {
 ?>
 <?php if ( ! onepress_is_selective_refresh() ){ ?>
 <section id="<?php if ( $id != '') echo $id; ?>" <?php do_action('onepress_section_atts', 'intro'); ?>
-         class="<?php echo esc_attr(apply_filters('onepress_section_class', 'section-features section-padding section-meta onepage-section', 'intro')); ?>">
+         class="<?php echo esc_attr(apply_filters('onepress_section_class', 'section-intro section-padding section-meta onepage-section', 'intro')); ?>">
 <?php } ?>
     <?php do_action('onepress_section_before_inner', 'intro'); ?>
     <div class="container">
