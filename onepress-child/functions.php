@@ -27,6 +27,10 @@ if (! function_exists ( "onepress_child_frontpage_section_parts" )) {
   function onepress_child_frontpage_section_parts() {
     $additionals = array (
         array (
+            "name" => 'intro',
+            "position" => 110 
+        ),
+        array (
             "name" => 'huegelrock',
             "position" => 150 
         ) 
