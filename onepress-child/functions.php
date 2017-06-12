@@ -99,4 +99,14 @@ if (! function_exists ( "onepress_child_frontpage_section_parts" )) {
   }
 }
 add_action ( 'onepress_frontpage_section_parts', 'onepress_child_frontpage_section_parts' );
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_theme_file_path ( '/inc/template-tags.php' );
+
+/**
+ * Customizer additions.
+ */
+require get_theme_file_path ( '/inc/customizer.php' );
 ?>
