@@ -3,15 +3,22 @@
 /**
  * Extend one press styles. 
  */
+add_action ( 'wp_enqueue_scripts', 'one_press_child_enqueue_styles', PHP_INT_MAX );
 function one_press_child_enqueue_styles() {
-  $parent_style = 'onepress-style';
   
-  wp_enqueue_style ( $parent_style, get_template_directory_uri () . '/style.css' );
-  wp_enqueue_style ( 'onepress-child-style', get_stylesheet_directory_uri () . '/style.css', array (
-      $parent_style 
-  ), wp_get_theme ()->get ( 'Version' ) );
+  $version = wp_get_theme ()->get ( 'Version' );
+  $inherits = array (
+      'onepress-style' 
+  );
+  
+  $parent_style_uri = get_template_directory_uri () . '/style.css';
+  wp_enqueue_style ( 'onepress-style', $parent_style_uri );
+  write_log($parent_style_uri);
+  
+  $child_style_uri = get_stylesheet_directory_uri () . '/style.css';
+  wp_enqueue_style ( 'onepress-child-style', $child_style_uri, $inherits, $version );
+  write_log($child_style_uri);
 }
-add_action ( 'wp_enqueue_scripts', 'one_press_child_enqueue_styles' );
 
 /**
  * Extend one press theme section parts by allowing additional section parts.
